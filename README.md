@@ -1,11 +1,12 @@
 # UnityServiceTemplate
-個人用のUnity/C#用リアルタイム通信基盤。
+
+gRPC/MessagePack/UniRxを使用した、リアルタイムで双方向通信を行うミニマムプロジェクト。
 
 ## 動作環境
 
 Server: .Net Core 2.0
 
-Client: Unity 2017.4.5LTS
+Client: Unity 2017.4.5LTS(.NET 4.6)
 
 ---
 
