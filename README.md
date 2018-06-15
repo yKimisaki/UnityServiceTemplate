@@ -1,8 +1,6 @@
 # UnityServiceTemplate
 
-gRPC/MessagePack/UniRxを使用した、リアルタイムで双方向通信を行うミニマムプロジェクト。
-
-## 動作環境
+## 制作環境
 
 Server: .Net Core 2.0
 
