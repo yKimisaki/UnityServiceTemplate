@@ -2,7 +2,6 @@
 using UnityEngine.UI;
 using UniRx;
 using UnityServiceTemplate;
-using Tonari.UniRx.Diagnostics;
 
 public class SampleScene : MonoBehaviour
 {
