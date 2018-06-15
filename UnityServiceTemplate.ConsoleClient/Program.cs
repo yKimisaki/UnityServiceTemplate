@@ -14,7 +14,14 @@ namespace Tonari.UnityServiceTemplate
                 while (true)
                 {
                     var message = Console.ReadLine();
-                    client.SendRequestAsync(message).Wait();
+                    try
+                    {
+                        client.SendRequestAsync(message).Wait();
+                    }
+                    catch(AggregateException es)
+                    {
+                        foreach (var e in es.InnerExceptions) Console.WriteLine(e);
+                    }
                 }
             }
         }
@@ -42,7 +49,7 @@ namespace Tonari.UnityServiceTemplate
 
             public async Task SendRequestAsync(string request)
             {
-                await this._defaultInvoker.RequestStream.WriteAsync(new GlobalStream() { Message = request });
+                await this._defaultInvoker.RequestStream.WriteAsync(new GlobalStream() { Message = request }).ConfigureAwait(false);
             }
         }
     }

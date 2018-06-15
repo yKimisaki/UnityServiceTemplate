@@ -1,5 +1,6 @@
 ﻿using Grpc.Core;
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Tonari.UnityServiceTemplate
@@ -16,11 +17,6 @@ namespace Tonari.UnityServiceTemplate
                 Ports = { new ServerPort("0.0.0.0", 50051, ServerCredentials.Insecure) }
             };
             this._server.Start();
-            
-            foreach (var port in _server.Ports)
-            {
-                Console.WriteLine(port.Host + ":" + port.BoundPort);
-            }
         }
 
         public void Dispose()
@@ -34,13 +30,13 @@ namespace Tonari.UnityServiceTemplate
             while (true)
             {
                 Console.WriteLine("\nリクエストを待っています");
-                await requestStream.MoveNext(context.CancellationToken);
+                await requestStream.MoveNext(context.CancellationToken).ConfigureAwait(false);
 
                 var request = requestStream.Current;
                 Console.WriteLine("リクエストを受信しました: {0}", request.Message);
 
                 var response = new GlobalStream { Message = request.Message + "が届きました。" };
-                await responseStream.WriteAsync(response);
+                await responseStream.WriteAsync(response).ConfigureAwait(false);
                 Console.WriteLine("レスポンスを送信しました: {0}", response.Message);
             }
         }
