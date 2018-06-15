@@ -10,7 +10,7 @@ namespace Tonari.UnityServiceTemplate
 
         public UnityServiceTemplateServer()
         {
-            this._server = new Server
+            this._server = new Server(new[] { new ChannelOption(ChannelOptions.SoReuseport, 0) })
             {
                 Services = { ServerServiceDefinition.CreateBuilder().AddMethod(GlobalDuplexStreaming.Method, this.AsyncDuplexStreaming).Build() },
                 Ports = { new ServerPort("0.0.0.0", 50051, ServerCredentials.Insecure) }
