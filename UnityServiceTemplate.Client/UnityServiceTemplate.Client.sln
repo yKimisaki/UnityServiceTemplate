@@ -1,15 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityServiceTemplate.Client", "UnityServiceTemplate.Client.csproj", "{5750A607-0D21-EDEC-A929-F6AAF02A7144}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UnityServiceTemplate.Shared", "..\UnityServiceTemplate.Shared\UnityServiceTemplate.Shared.shproj", "{FD0C17F7-10A4-4096-8952-D7CA19C7F6C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityServiceTemplate.Server", "..\UnityServiceTemplate.Server\UnityServiceTemplate.Server.csproj", "{0957A5B0-0633-4D2F-A622-F74FA5F088C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityServiceTemplate.Server", "..\UnityServiceTemplate.Server\UnityServiceTemplate.Server.csproj", "{0957A5B0-0633-4D2F-A622-F74FA5F088C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityServiceTemplate.Client.Core", "..\UnityServiceTemplate.Client.Core\UnityServiceTemplate.Client.Core.csproj", "{1556C671-F1E6-43F6-8546-E0BC2E983FFB}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\UnityServiceTemplate.Shared\UnityServiceTemplate.Shared.projitems*{1556c671-f1e6-43f6-8546-e0bc2e983ffb}*SharedItemsImports = 4
+		..\UnityServiceTemplate.Shared\UnityServiceTemplate.Shared.projitems*{fd0c17f7-10a4-4096-8952-d7ca19c7f6c0}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -34,5 +40,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA84FB77-847A-4138-8EED-0A75C6DBEE4F}
 	EndGlobalSection
 EndGlobal

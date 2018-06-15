@@ -1,7 +1,7 @@
 ﻿using Grpc.Core;
 using MessagePack;
 
-namespace UnityServiceTemplate
+namespace Tonari.UnityServiceTemplate
 {
     internal class GlobalDuplexStreaming
     {

@@ -1,6 +1,6 @@
 ﻿using MessagePack;
 
-namespace UnityServiceTemplate
+namespace Tonari.UnityServiceTemplate
 {
     [MessagePackObject]
     public class GlobalStream

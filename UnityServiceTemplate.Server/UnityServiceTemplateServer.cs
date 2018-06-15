@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace UnityServiceTemplate
+namespace Tonari.UnityServiceTemplate
 {
     internal class UnityServiceTemplateServer : IDisposable
     {

@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using UniRx;
 
-namespace UnityServiceTemplate
+namespace Tonari.UnityServiceTemplate
 {
     public class UnityServiceTemplateClient : ClientBase<UnityServiceTemplateClient>, IDisposable
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnityServiceTemplate
+namespace Tonari.UnityServiceTemplate
 {
     internal class Program
     {

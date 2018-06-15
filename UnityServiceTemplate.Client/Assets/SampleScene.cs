@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
-using UnityServiceTemplate;
+using Tonari.UnityServiceTemplate;
 
 public class SampleScene : MonoBehaviour
 {
