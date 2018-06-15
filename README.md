@@ -28,7 +28,7 @@ VisualStudioが立ち上がったら、UnityServiceTemplate.Serverを実行し�
 
 セキュリティグループのインバウンドにTCPで50051（ないしは指定したやつ）のポートを開けておきます。
 
-インスタンスにPSCPなりで以下のファイルを転送します。
+PSCPなりで以下のファイルをインスタンスの/home/ec2-user/に転送します。
 
 - ビルドしたやつ
   - UnityServiceTemplate.Server.dll
