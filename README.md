@@ -6,7 +6,7 @@ Server: .Net Core 2.0
 
 Client: Unity 2017.4.5LTS(.NET 4.6)
 
-## 動かし方
+## で動かす
 
 VisualStudio 2017あたりがあるとよいと思います。
 
