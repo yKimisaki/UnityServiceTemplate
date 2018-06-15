@@ -13,9 +13,14 @@ namespace Tonari.UnityServiceTemplate
             this._server = new Server
             {
                 Services = { ServerServiceDefinition.CreateBuilder().AddMethod(GlobalDuplexStreaming.Method, this.AsyncDuplexStreaming).Build() },
-                Ports = { new ServerPort("localhost", 50001, ServerCredentials.Insecure) }
+                Ports = { new ServerPort("0.0.0.0", 50051, ServerCredentials.Insecure) }
             };
             this._server.Start();
+            
+            foreach (var port in _server.Ports)
+            {
+                Console.WriteLine(port.Host + ":" + port.BoundPort);
+            }
         }
 
         public void Dispose()
@@ -25,9 +30,12 @@ namespace Tonari.UnityServiceTemplate
 
         public async Task AsyncDuplexStreaming(IAsyncStreamReader<GlobalStream> requestStream, IServerStreamWriter<GlobalStream> responseStream, ServerCallContext context)
         {
+            Console.WriteLine("クライアントが接続されました");
             while (true)
             {
+                Console.WriteLine("\nリクエストを待っています");
                 await requestStream.MoveNext(context.CancellationToken);
+
                 var request = requestStream.Current;
                 Console.WriteLine("リクエストを受信しました: {0}", request.Message);
 

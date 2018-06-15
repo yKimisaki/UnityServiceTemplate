@@ -11,7 +11,7 @@ namespace Tonari.UnityServiceTemplate
         private AsyncDuplexStreamingCall<GlobalStream, GlobalStream> _defaultInvoker;
         private SingleAssignmentDisposable _subscription;
 
-        public UnityServiceTemplateClient() : base(new Channel("localhost:50001", ChannelCredentials.Insecure))
+        public UnityServiceTemplateClient(string host, int port) : base(new Channel(host, port, ChannelCredentials.Insecure))
         {
             this._defaultInvoker = CallInvoker.AsyncDuplexStreamingCall(GlobalDuplexStreaming.Method, null, new CallOptions(null, null, default(CancellationToken)));
             this._subscription = new SingleAssignmentDisposable();

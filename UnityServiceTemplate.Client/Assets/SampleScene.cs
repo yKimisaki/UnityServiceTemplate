@@ -11,7 +11,7 @@ public class SampleScene : MonoBehaviour
 
     private void Start()
     {
-        var client = new UnityServiceTemplateClient();
+        var client = new UnityServiceTemplateClient("localhost", 50051);
         client.AddTo(this);
 
         GoodMorning.OnClickAsObservable()
