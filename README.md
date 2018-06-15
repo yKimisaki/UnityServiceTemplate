@@ -5,7 +5,7 @@
 
 Server: .Net Core 2.0
 
-Client: Unity 2017.4.5LTS(.NET Standard 2.0)
+Client: Unity 2017.4.5LTS
 
 ---
 
