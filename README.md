@@ -49,7 +49,7 @@ PSCPなりで以下のファイルをインスタンスの/home/ec2-user/に転�
 
 でサーバが起動するでしょう。
 
-クライアント側はSampleSceneのlocalhostのあたりに、インスタンスのパブリックDNSを入れればつながると思います。
+クライアント側はSampleScene.csのlocalhostのあたりに、インスタンスのパブリックDNSを入れればつながると思います。
 
 ---
 
